@@ -1,0 +1,280 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url("../fonts/opensans/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-bold-webfont.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url("../fonts/opensans/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans/opensans-regular-webfont.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font: normal 14px 'Open Sans', sans-serif;
+	line-height: 18px;
+	text-align: center;
+	color: #ffffff;
+	background: url("../img/bg.jpeg");
+	background-size: cover;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	-webkit-transition: All 0.5s ease;
+	-moz-transition: All 0.5s ease;
+	-ms-transition: All 0.5s ease;
+	-o-transition: All 0.5s ease;
+	transition: All 0.5s ease;
+}
+
+a:hover {
+	color: #f74e4d;
+	text-decoration: none;
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h3.title {
+	padding: 90px 0 0px 0;
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 100;
+	margin: 0;
+}
+
+#countdown {
+	margin: 70px auto 50px auto;
+	width: 720px;
+}
+
+#countdown li {
+	width: 180px;
+	display: inline-block;
+	text-align: center;
+}
+
+#countdown li.num {
+	list-style-type: none;
+	font-size: 64px;
+	color: #ffffff;
+	font-weight: 400;
+	line-height: 120%;
+}
+
+#countdown .text {
+	font-size: 15px;
+	display: block;
+	padding: 10px 0;
+	font-style: italic;
+	line-height: 120%;
+	text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-form {
+	display: inline-block;
+	margin: 30px 0 10px 0;
+	position: relative;
+}
+
+.subscribe-form input.subscribe-email {
+	width: 320px;
+	height: 28px;
+	padding: 13px 5px 11px 20px;
+	float: left;
+	font-size: 18px;
+	line-height: 28px;
+	color: #363636;
+	border: 1px solid #ffffff;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
+}
+
+.subscribe-form .subscribe-btn {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	border: none;
+	height: 44px;
+	background-color: #d16d00;
+	/* Fallback Color */
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ff8705), to(#d16d00));
+	/* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #ff8705, #d16d00);
+	/* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image: -moz-linear-gradient(top, #ff8705, #d16d00);
+	/* FF3.6 */
+	background-image: -ms-linear-gradient(top, #ff8705, #d16d00);
+	/* IE10 */
+	background-image: -o-linear-gradient(top, #ff8705, #d16d00);
+	/* Opera 11.10+ */
+	background-image: linear-gradient(top, #ff8705, #d16d00);
+	padding: 0 15px;
+	font-size: 16px;
+	color: white;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+.subscribe-form .subscribe-btn:hover,
+.subscribe-form .subscribe-btn:focus {
+	color: white;
+	background-color: #ff8705;
+	outline: none;
+	cursor: pointer;
+}
+
+.info-message {
+	color: #ffffff;
+}
+
+.social-icon {
+	display: inline-block !important;
+	font-size: 0px;
+	cursor: pointer;
+	margin: 10px 10px;
+	width: 60px !important;
+	height: 60px !important;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+}
+
+.social-icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+.social-icon:before {
+	speak: none;
+	font-size: 24px;
+	line-height: 60px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+
+.social-btns {
+	display: inline-block;
+	clear: both;
+	text-align: center;
+	margin: auto;
+	padding: 50px 0 0 0;
+}
+
+.social-btns .social-icon {
+	background: rgba(0, 0, 0, 0.1);
+	-webkit-transition: background 0.2s, color 0.2s;
+	-moz-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+
+.social-btns .social-icon:after {
+	top: -7px;
+	left: -7px;
+	padding: 7px;
+	box-shadow: 0 0 0 4px #fff;
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+	-webkit-transform: scale(0.8);
+	-moz-transition: -moz-transform 0.2s, opacity 0.2s;
+	-moz-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transition: transform 0.2s, opacity 0.2s;
+	transform: scale(0.8);
+	opacity: 0;
+}
+
+.social-btns .social-icon:hover {
+	background: white;
+	color: #F87F0E;
+}
+
+.social-btns .social-icon:hover:after {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+@media (min-width: 768px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		max-width: 320px;
+	}
+	h3.title {
+		margin: 30px 0 0px 0;
+		font-size: 18px;
+	}
+	.subscribe-form input.subscribe-email {
+		width: 260px;
+	}
+	#countdown {
+		margin: 60px auto 30px auto;
+		width: 320px;
+		height: 70px;
+	}
+	#countdown li {
+		width: 80px;
+	}
+	#countdown li.num {
+		font-size: 48px;
+		line-height: 24px;
+	}
+	#countdown .text {
+		font-size: 13px;
+	}
+}

@@ -1,0 +1,339 @@
+<div class="row gutters">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="text-right mb-4">
+            <!-- Button trigger modal -->
+            <!-- <button type="button" class="btn btn-primary" ng-click="pc.openModalFormPet()">Adicionar um Pet</button> -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalFormPet" tabindex="-1" role="dialog" aria-labelledby="addNewContactLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addNewContactLabel" ng-if="!pc.formPet.idpets" >Novo cadastro</h5>
+                            <h5 class="modal-title" id="addNewContactLabel" ng-if="pc.formPet.idpets" >Alterar cadastro</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formPet" name="formPet" class="row gutters" novalidate="true">
+                                <input type="hidden" ng-model="pc.formPet.idpets">
+                                <input type="hidden" ng-model="pc.formPet.iduser">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">                                       
+                                    <div class="upload-photo-container">
+                                        <img  user-avatar  ngf-thumbnail="pc.formPet.path_img  || '../../../ipet/img/not_photo.png?{{date}}'  " class="user-thumb" alt="Upload" />
+                                        <div class="form-group m-0">
+                                            <small style="color:#FFF;">Imagem JPG e até 5MB</small>
+                                            <div class="input-group">                                                  
+                                                <div class="custom-file">
+                                                    <input 
+                                                        type="file" 
+                                                        ngf-max-size="5MB"
+                                                        accept="image/jpg"
+                                                        ngf-pattern="'.jpg'"
+                                                        ngf-model-invalid="errorFileTelaLogin"
+                                                        ngf-select
+                                                        ng-required="!pc.formPet.idpets" 
+                                                        class="custom-file-input" 
+                                                        id="photo"
+                                                        name="photo"
+                                                        ng-model="pc.formPet.photo"
+                                                        ng-class="formPet.photo.$valid?'is-valid':(formPet.photo.$pristine?'border-warning':'is-invalid')">
+                                                    <label class="custom-file-label" for="photo" aria-describedby="photoAddon">{{pc.formPet.photo.name}}</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label for="nome">Nome:</label>
+                                        <input
+                                            autocomplete="off"
+                                            type="text" 
+                                            id="nome" 
+                                            name="nome" 
+                                            ng-required="true" 
+                                            ng-minlength="3"   
+                                            ng-maxlength="50"   
+                                            class="form-control" 
+                                            ng-model="pc.formPet.nome"
+                                            ng-attr-placeholder="Nome" 
+                                            ng-class="formPet.nome.$valid?'is-valid':(formPet.nome.$pristine?'border-warning':'is-invalid')">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="especie">Especie:</label>
+                                        <input 
+                                            autocomplete="off"
+                                            type="text" 
+                                            id="especie" 
+                                            name="especie" 
+                                            ng-required="true" 
+                                            ng-minlength="3"   
+                                            ng-maxlength="50"   
+                                            class="form-control" 
+                                            ng-model="pc.formPet.especie"
+                                            ng-attr-placeholder="Especie" 
+                                            ng-class="formPet.especie.$valid?'is-valid':(formPet.especie.$pristine?'border-warning':'is-invalid')">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="raca">Raça:</label>
+                                        <input 
+                                            autocomplete="off"
+                                            type="text" 
+                                            id="raca" 
+                                            name="raca" 
+                                            ng-required="false" 
+                                            ng-minlength="3"   
+                                            ng-maxlength="50"   
+                                            class="form-control" 
+                                            ng-model="pc.formPet.raca"
+                                            ng-attr-placeholder="Raça" 
+                                            ng-class="formPet.raca.$valid?'is-valid':(formPet.raca.$pristine?'border-warning':'is-invalid')">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="form-group">
+                                        <label for="idade">Idade:</label>
+                                        <input 
+                                            autocomplete="off"
+                                            type="text" 
+                                            id="idade" 
+                                            ng-pattern="/(0*[1-9]+0*)+/"
+                                            name="idade" 
+                                            ng-required="true" 
+                                            minlength="1";
+                                            min="1"   
+                                            max="50"  
+                                            step="1" 
+                                            class="form-control" 
+                                            ng-model="pc.formPet.idade"
+                                            ng-attr-placeholder="idade" 
+                                            ng-class="formPet.idade.$valid?'is-valid':(formPet.idade.$pristine?'border-warning':'is-invalid')">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sexo">Sexo:</label>
+                                        <select 
+                                            class="form-control" 
+                                            ng-required="true"
+                                            name="sexo" 
+                                            ng-model="pc.formPet.sexo"
+                                            id="sexo"
+                                            ng-class="formPet.sexo.$valid?'is-valid':(formPet.sexo.$pristine?'border-warning':'is-invalid')">
+                                            <option value="" hidden> -- Selecionar -- </option>
+                                            <option value="1">Macho</option>
+                                            <option value="2">Fêmea</option>
+                                            <option value="3">Não sei</option>
+                                        </select>
+                                    </div>    
+                                    <div class="form-group">
+                                        <label for="predominante">Cor Predominante:</label>
+                                        <input 
+                                            autocomplete="off"
+                                            type="text" 
+                                            id="especie" 
+                                            ng-minlength="3"   
+                                            ng-maxlength="20"   
+                                            name="predominante" 
+                                            ng-required="true"                                               
+                                            class="form-control" 
+                                            ng-model="pc.formPet.predominante"
+                                            ng-attr-placeholder="predominante" 
+                                            ng-class="formPet.predominante.$valid?'is-valid':(formPet.predominante.$pristine?'border-warning':'is-invalid')">
+                                    </div>                              
+                                </div>                             
+                            </form>
+                        </div>
+                        <div class="modal-footer custom">
+                            <div class="left-side">
+                                <button type="button" class="btn btn-link danger btn-block" ng-click="pc.limparDados()" >Limpar</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="right-side">
+                                <button ng-if="!pc.formPet.idpets"  ng-disabled="!formPet.$valid" ng-click="pc.cadastrarPet()" type="button" class="btn btn-link success btn-block">Cadastrar</button>
+                                <button ng-if="pc.formPet.idpets" ng-disabled="!formPet.$valid" ng-click="pc.cadastrarPet()" type="button" class="btn btn-link success btn-block">Alterar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Row start -->
+<div class="row gutters">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <!-- Edit Contact Modal -->
+        <div class="modal fade" id="editContact" tabindex="-1" role="dialog" aria-labelledby="editContactLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editContactLabel">Edit Contact</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row gutters">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="upload-photo-container">
+                                    <img src="img/user.png" class="user-thumb" alt="Upload" />
+                                    <div class="form-group m-0">
+                                        <div class="input-group">
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="uploadPhoto">
+                                                <label class="custom-file-label" for="uploadPhoto" aria-describedby="uploadPhotoAddon">../design/user.png</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name:</label>
+                                    <input type="text" class="form-control" id="contactName" value="Aliko Catherine">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userEmail">Email:</label>
+                                    <input type="email" class="form-control" id="userEmail" value="aliko.catherine@bluemoon.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company:</label>
+                                    <input type="text" class="form-control" id="company" value="Bluemoon">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label for="nickName">Nick Name:</label>
+                                    <input type="text" class="form-control" id="nickName" value="Maxx">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phoneNumber">Phone Number:</label>
+                                    <input type="text" class="form-control" id="phoneNumber" value="+2 300-332-7753">
+                                </div>
+                                <div class="form-group">
+                                    <label for="birthday">Birthday:</label>
+                                    <div class="custom-date-input">
+                                        <input type="text" name="" class="form-control datepicker" id="birthday" placeholder="dd mm yyyy">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group mb-0">
+                                    <label for="addResss">Address:</label>
+                                    <textarea class="form-control" id="addResss"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer custom">
+                        <div class="left-side">
+                            <button type="button" class="btn btn-link danger btn-block" data-dismiss="modal">Cancel</button>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="right-side">
+                            <button type="button" class="btn btn-link success btn-block">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-12" ng-repeat="pt in pc.listaDePetsInteracao">
+        <figure class="user-card">
+            <figcaption>              
+                <img src="/ipet/internetFiles/profilePet_{{pt.iduser}}{{pt.idpets}}.jpg?{{date}}" alt="Bluemoon Admin" class="profile">
+                <h5>{{pt.nome}}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Especie:</strong>{{pt.especie}}</li>
+                    <li class="list-group-item"><strong>Raça:</strong>{{pt.raca}}</li>
+                    <li class="list-group-item"><strong>Idade:</strong>{{pt.idade}}</li>
+                    <li class="list-group-item"><strong>Sexo:</strong>{{pt.sexo | setSexo }}</li>
+                    <li class="list-group-item"><strong>Predominante: </strong> {{pt.predominante}}</li>   
+                    <li>                        
+                        <button ng-if="pt.perdido == '1' " class="btn btn-info btn-sm btn-block"  ng-click="pc.funcMenu(4, pt)">Mensagem</button>
+                    </li>                   
+                    <li><button ng-click="pc.funcPerdido(0,pt.idpets)" ng-if="pt.perdido == '0' " class="btn btn-success btn-sm btn-block">Status: Normal</button></li>                   
+                </ul>
+            </figcaption>
+        </figure>
+    </div>  
+    
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalPerdidoConfirmar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Informe o CEP para ajudar nas buscas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formCEP" name="formCEP">
+                        <label for="cep">CEP da Ocorrência</label>
+                        <input
+                            autocomplete="off"
+                            type="text" 
+                            id="cep" 
+                            name="cep" 
+                            ng-required="true" 
+                            ng-minlength="3"   
+                            ng-maxlength="50"   
+                            class="form-control" 
+                            ng-model="pc.formCEP.cep"
+                            ng-attr-placeholder="CEP" 
+                            ng-class="formCEP.cep.$valid?'is-valid':(formCEP.cep.$pristine?'border-warning':'is-invalid')">
+                        <label for="data">Data da Ocorrência:</label>
+                        <input
+                            autocomplete="off"
+                            type="date" 
+                            id="data" 
+                            name="data" 
+                            ng-required="true" 
+                            ng-minlength="3"   
+                            ng-maxlength="50"   
+                            class="form-control" 
+                            ng-model="pc.formCEP.data"
+                            ng-attr-placeholder="Desapareceu" 
+                            ng-class="formCEP.data.$valid?'is-valid':(formCEP.data.$pristine?'border-warning':'is-invalid')">
+                        <label for="cidade">Cidade da Ocorrência:</label>
+                        <input
+                            autocomplete="off"
+                            type="text" 
+                            id="cidade" 
+                            name="cidade" 
+                            ng-required="true" 
+                            ng-minlength="3"   
+                            ng-maxlength="50"   
+                            class="form-control" 
+                            ng-model="pc.formCEP.cidade"
+                            ng-attr-placeholder="Desapareceu" 
+                            ng-class="formCEP.cidade.$valid?'is-valid':(formCEP.cidade.$pristine?'border-warning':'is-invalid')">
+                        <label for="bairro">Bairro da Ocorrência:</label>
+                        <input
+                            autocomplete="off"
+                            type="text" 
+                            id="bairro" 
+                            name="bairro" 
+                            ng-required="true" 
+                            ng-minlength="3"   
+                            ng-maxlength="50"   
+                            class="form-control" 
+                            ng-model="pc.formCEP.bairro"
+                            ng-attr-placeholder="Desapareceu" 
+                            ng-class="formCEP.bairro.$valid?'is-valid':(formCEP.bairro.$pristine?'border-warning':'is-invalid')">
+                    </form>                       
+                </div>
+                <div class="modal-footer">                    
+                    <button ng-disabled="!formCEP.$valid" ng-click="pc.cadastrarStatusPerdido()" type="button" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Row end -->

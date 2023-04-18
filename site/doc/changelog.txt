@@ -1,0 +1,37 @@
+@Version 	1.5
+@Date		Saturday, July 2, 2016
+@Author		Dorin Grigoras
+	* Update: Bootstrap to version 3.3.6
+	* Update: Fontawesome to V4.4.0 (changes: assets/css/font-awesome.css , assets/fonts/fontawesome-*)
+	* Update: jQuery to v2.2.3 (changes: added assets/plugins/jquery-2.2.3.min.* , replaced jQuery version on all HTML files)
+	* Fix: Google Maps Key (Key Used: AIzaSyCqCn84CgZN6o1Xc3P4dM657HIxkX3jzPY, Changes: assets/js/scripts.js line 722)
+
+
+@Version 	1.4
+@Date		Wednesday, July 22, 2015
+@Author		Dorin Grigoras
+	* Update: Bootstrap to version 3.3.5
+	* Update: jQuery to Version 2.1.4 (changes: replaced - jquery-2.1.4.min.js ,  jquery-2.1.4.min.map, all HTML files)
+
+@Version 	1.3
+@Date		Tuesday, April 21, 2015
+@Author		Dorin Grigoras
+	* Update: Bootstrap to version 3.3.4
+	* Update: jQuery to Version 2.1.3
+	* Update: Magnific Popup to Version 1.0.0 (changes: replace assets/plugins/magnific-popup/)
+
+@Version 	1.2
+@Date		Wednesday, November 19, 2014
+	* Update: Bootstrap v3.3.1
+	* Update: jQuery: v2.1.1
+	* New: LESS
+
+@Version 	1.1
+@Date		Monday, July 28, 2014
+	* Bootstrap update to 3.2.0
+	* bug fixed - firefox placeholder (changes: layout.css)
+	* Fixed Contact Form Message (changes: assets/js/scripts.js)
+
+@Version 	1.0
+@Date		Saturday, April 12, 2014
+	* Initial Release

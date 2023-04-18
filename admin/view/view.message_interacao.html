@@ -1,0 +1,50 @@
+<!-- Fixed body scroll start -->
+<div class="fixedBodyScroll">					
+    				
+    <!-- Row start -->
+    <div class="row gutters">
+        <div class="container-fluid mb-2">
+            <button class="btn btn-primary float-right" ng-click="pc.funcMenu(3)">Voltar</button>
+        </div>    
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+            
+            <!-- Chat section start -->
+            <div class="chat-section">               
+                <!-- Row start -->
+                <div class="row no-gutters">                 
+                    <div class="col-12">  
+                        <div class="chat-container">
+                            <div class="chatContainerScroll">
+                                <ul class="chat-box" style="overflow-y: auto;overflow-x: hidden; height: calc(100vh - 395px);">
+                                    <li  ng-class="msn.adm == '1' ? 'chat-right':'chat-left' " class='' ng-repeat="msn in pc.listagemMensagensInteracao">
+                                        <div class='chat-avatar'>                                          
+                                            <div class='chat-name' ng-if="msn.adm == '0'">{{msn.nome_user_encontrou}}</div>
+                                            <div class='chat-name' ng-if="msn.adm == '1'">{{msn.nome_user_perdeu}}</div>
+                                        </div>
+                                        <div class='chat-text'>
+                                            <p>{{msn.mensagem}}</p>                                           
+                                        </div>
+                                    </li>                                                          
+                                </ul>
+                            </div>
+                            <div class="chat-form" ng-show="pc.listagemMensagensInteracao.length > 0 ">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Digite aqui sua mensagem..." ng-model="pc.mensagemDigitadaInteracao"></textarea>
+                                    <button ng-disabled="pc.mensagemDigitadaInteracao =='' " class="btn btn-primary" ng-click="pc.enviarMensagemInteracao()">
+                                        <i class="icon-send"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row end -->
+            </div>
+            <!-- Chat section end -->
+
+        </div>
+    </div>
+    <!-- Row end -->
+
+</div>
+<!-- Fixed body scroll end -->

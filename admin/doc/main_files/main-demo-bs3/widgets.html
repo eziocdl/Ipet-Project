@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="Bluemoon Admin" />
+		<meta name="keywords" content="Admin, Dashboard, Bootstrap3, Sass, transform, CSS3, HTML5, Web design, UI Design, Responsive Dashboard, Responsive Admin, Admin Theme, Best Admin UI, Bootstrap Theme, Wrapbootstrap, Bootstrap, C3 Graphs, D3 Graphs, NVD3 Graphs, Admin Skin, Black Admin Dashboard, Grey Admin Dashboard, Dark Admin Dashboard, Simple Admin Dashboard, Simple Admin Theme, Simple Bootstrap Dashboard, Invoice, Tasks, Profile" />
+		<meta name="author" content="Bootstrap Gallery" />
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<title>Blue Moon - Responsive Admin Dashboard - Widgets</title>
+		
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen" />
+
+		<!-- Ion Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+		
+		<!-- C3 CSS -->
+		<link href="css/c3/c3.css" rel="stylesheet" />
+
+		<!-- Horizontal bar CSS -->
+		<link href="css/horizontal-bar/chart.css" rel="stylesheet" />
+
+		<!-- Datepicker -->
+		<link href="css/datepicker.css" rel="stylesheet" />
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+		<!-- Header starts -->
+		<header>
+
+			<!-- Logo starts -->
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="Bluemoon Admin" />
+			</a>
+			<!-- Logo ends -->
+
+			<!-- Header actions starts -->
+			<ul id="header-actions" class="clearfix">
+				<li class="list-box hidden-xs dropdown">
+					<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-warning2"></i>
+					</a>
+					<span class="info-label blue-bg">5</span>
+					<ul class="dropdown-menu imp-notify">
+						<li class="dropdown-header">You have 3 notifications</li>
+						<li>
+							<div class="icon">
+								<img src="img/thumbs/user4.png" alt="Bluemoon Admin">
+							</div>
+							<div class="details">
+								<strong class="text-danger">Wilson</strong>
+								<p>The best Dashboard design I have seen ever.</p>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+								<img src="img/thumbs/user6.png" alt="Bluemoon Admin">
+							</div>
+							<div class="details">
+								<strong class="text-success">John Smith</strong>
+								<p>Jhonny sent you a message.</p>
+							</div>
+						</li>
+						<li>
+							<div class="icon">
+								<img src="img/thumbs/user11.png" alt="Bluemoon Admin">
+							</div>
+							<div class="details">
+								<strong class="text-info">Justin Mezzell</strong>
+								<p>Stella, Added you as a Friend.</p>
+							</div>
+						</li>
+						<li class="dropdown-footer">See all the notifications</li>
+					</ul>
+				</li>
+				<li class="list-box hidden-xs dropdown">
+					<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-archive2"></i>
+					</a>
+					<span class="info-label red-bg">3</span>
+					<ul class="dropdown-menu stats-widget clearfix">
+						<li>
+							<h5 class="text-success">$37895</h5>
+							<p>Revenue <span class="text-success">+2%</span></p>
+							<div class="progress">
+								<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+									<span class="sr-only">40% Complete (success)</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h5 class="text-warning">47,892</h5>
+							<p>Downloads <span class="text-warning">+39%</span></p>
+							<div class="progress">
+								<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+									<span class="sr-only">40% Complete (warning)</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h5 class="text-danger">28214</h5>
+							<p>Uploads <span class="text-danger">-7%</span></p>
+							<div class="progress">
+								<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+									<span class="sr-only">40% Complete (danger)</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="list-box user-admin dropdown">
+					<div class="admin-details">
+						<div class="name">Sam Joel</div>
+						<div class="designation">Current User</div>
+					</div>
+					<a id="drop4" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-account_circle"></i>
+					</a>
+					<ul class="dropdown-menu sm">
+						<li class="dropdown-content">
+							<a href="#"><i class="icon-warning2"></i>Update Password<br><span>Your password will expire in 7 days.</span></a>
+							<a href="profile.html">Edit Profile</a>
+							<a href="forgot-pwd.html">Change Password</a>
+							<a href="styled-inputs.html">Settings</a>
+							<a href="login.html">Logout</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- Header actions ends -->
+
+			<div class="custom-search hidden-sm hidden-xs">
+				<input type="text" class="search-query" placeholder="Search here ...">
+				<i class="icon-search3"></i>
+			</div>
+		</header>
+		<!-- Header ends -->
+
+		<!-- Container fluid starts -->
+		<div class="container-fluid">
+
+			<!-- Navbar starts -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="collapse-navbar">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-blur_on"></i>Dashboard <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='index.html'>Dashboard</a>
+								</li>
+								<li>
+									<a href="dashboard2.html">Dashboard V2</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-business_center"></i> Pages <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='profile.html'>Profile</a>
+								</li>
+								<li>
+									<a href='tasks.html'>Tasks</a>
+								</li>
+								<li>
+									<a href="calendar.html">Calendar</a>
+								</li>
+								<li>
+									<a href='invoice.html'>Invoice</a>
+								</li>
+								<li>
+									<a href="pricing.html">Pricing</a>
+								</li>
+								<li>
+									<a href='blog.html'>Blog</a>
+								</li>
+								<li>
+									<a href="gallery.html">Gallery</a>
+								</li>
+								<li>
+									<a href="user-cards.html">User Cards</a>
+								</li>
+								<li>
+									<a href="contacts.html">Contacts</a>
+								</li>
+								<li>
+									<a href='default.html'>Default Layout</a>
+								</li>
+								<li>
+									<a href="panels.html">Panels</a>
+								</li>
+							</ul>
+						</li>
+						<li class="active">
+							<a href="widgets.html"><i class="icon-widgets"></i>Widgets</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-terrain"></i>Graphs <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='c3-graphs.html'>C3 Graphs</a>
+								</li>
+								<li>
+									<a href='maps.html'>Vector Maps</a>
+								</li>
+								<li>
+									<a href='map-skins.html'>Map Skins</a>
+								</li>
+								<li>
+									<a href='morris.html'>Morris Graphs</a>
+								</li>
+								<li>
+									<a href='flot-graphs.html'>Flot Graphs</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-subtitles"></i>Forms <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='form-inputs.html'>Form Inputs</a>
+								</li>
+								<li>
+									<a href="validations.html">Form Validations</a>
+								</li>
+								<li>
+									<a href="treeview.html">Tree View</a>
+								</li>
+								<li>
+									<a href="colorpicker.html">Colorpicker</a>
+								</li>
+								<li>
+									<a href='editor.html'>WYSIWYG Editor</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-palette2"></i>UI Elements <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='buttons.html'>Buttons</a>
+								</li>
+								<li>
+									<a href='badges.html'>Badges</a>
+								</li>
+								<li>
+									<a href="loading.html">Loading</a>
+								</li>
+								<li>
+									<a href='components.html'>Components</a>
+								</li>
+								<li>
+									<a href='modals.html'>Modals</a>
+								</li>
+								<li>
+									<a href='progressbars.html'>Progress Bars</a>
+								</li>
+								<li>
+									<a href='notifications.html'>Notifications</a>
+								</li>
+								<li>
+									<a href='icons.html'>Icons</a>
+								</li>
+								<li>
+									<a href='typography.html'>Typography</a>
+								</li>
+								<li>
+									<a href='spinners.html'>Spinners</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-view_week"></i>Tables <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='tables.html'>Tables</a>
+								</li>
+								<li>
+									<a href="data-tables.html">Data Tables</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-add_alert"></i>Error <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href='login.html'>Login</a>
+								</li>
+								<li>
+									<a href='signup.html'>SignUp</a>
+								</li>
+								<li>
+									<a href='lock-screen.html'>Lock Screen</a>
+								</li>
+								<li>
+									<a href='forgot-pwd.html'>Forgot Password</a>
+								</li>
+								<li>
+									<a href='error.html'>Page Not Found</a>
+								</li>
+								<li>
+									<a href='maintenance.html'>Maintenance</a>
+								</li>
+								<li>
+									<a href='coming-soon.html'>Coming Soon</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- Navbar ends -->
+
+			<!-- Dashboard wrapper starts -->
+			<div class="dashboard-wrapper">
+
+				<!-- Top bar starts -->
+				<div class="top-bar clearfix">
+					<div class="row gutter">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="page-title">
+								<h4>Widgets</h4>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<ul class="right-stats" id="mini-nav-right">
+								<li>
+									<a href="javascript:void(0)" class="btn btn-danger"><span>895</span>Sales</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" class="btn btn-success"><span>125</span>Leads</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- Top bar ends -->
+
+				<!-- Main container starts -->
+				<div class="main-container">
+
+					<!-- Row starts -->
+					<div class="row gutter">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Messages</h4>
+								</div>
+								<div class="panel-body">
+									<ul class="chat-list">
+										<li class="in">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user4.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5>Jimmy Willams</h5>
+													<p>Raw denim heard of them tofu master cleanse</p>
+												</div>
+											</div>
+										</li>
+										<li class="out">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user8.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5>Peter</h5>
+													<p>Next level veard</p>
+												</div>
+											</div>
+										</li>
+										<li class="in">
+											<div class="chat-img">
+												<img alt="Avtar" src="img/thumbs/user11.png">
+											</div>
+											<div class="chat-body">
+												<div class="chat-message">
+													<h5 class="name">Sandreiano</h5>
+													<p>Will stumptown scenester farm-to-table denim coffee viral.</p>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Clients</h4>
+								</div>
+								<div class="panel-body">
+									<ul class="top-clients">
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user1.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$34,098</div>
+												<p class="biz-name">Killer Demin Ltd.</p>
+												<div class="progress">
+													<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style="width: 86%">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user9.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$21,660</div>
+												<p class="biz-name">Welco Smartness Tech.</p>
+												<div class="progress">
+													<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="avatar">
+												<img src="img/thumbs/user5.png" alt="Bluemoon Admin">
+											</div>
+											<div class="biz">
+												<div class="value">$14,985</div>
+												<p class="biz-name">Xioma Willams &amp; co.</p>
+												<div class="progress">
+													<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" style="width: 53%">
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Datepicker</h4>
+								</div>
+								<div class="panel-body">
+									<div id="datepicker"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+					<!-- Row starts -->
+					<div class="row gutter">
+						<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Geo Map</h4>
+								</div>
+								<div class="panel-body">
+									<div class="row gutter">
+										<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+											<div id="world-map-markers" class="chart-height1"></div>
+										</div>
+										<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+											<ul class="list-group sale-by-location">
+												<li class="list-group-item">
+													<span class="label yellow">549</span>
+													United States
+												</li>
+												<li class="list-group-item">
+													<span class="label blue">835</span>
+													Germany
+												</li>
+												<li class="list-group-item">
+													<span class="label green">663</span>
+													Thailand
+												</li>
+												<li class="list-group-item">
+													<span class="label red">981</span>
+													Australia
+												</li>
+												<li class="list-group-item">
+													<span class="label teal">427</span>
+													Brazil
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Expenses</h4>
+								</div>
+								<div class="panel-body">
+									<ul class="expenses">
+										<li>
+											<a href="javascript:void(0)">
+												<span class="expenses-icon red">
+													<i class="icon-shield"></i>
+												</span>
+												<span class="expenses-type">Month Salary</span>
+												<span class="expenses-amount text-success">+7250</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="expenses-icon green">
+													<i class="icon-aircraft"></i>
+												</span>
+												<span class="expenses-type">Trip to Venice</span>
+												<span class="expenses-amount text-danger">-1100</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="expenses-icon blue">
+													<i class="icon-shopping-cart"></i>
+												</span>
+												<span class="expenses-type yellow">Shopping</span>
+												<span class="expenses-amount text-danger">-1890</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="expenses-icon yellow">
+													<i class="icon-bowl"></i>
+												</span>
+												<span class="expenses-type">Lunch at work</span>
+												<span class="expenses-amount text-danger">-1250</span>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)">
+												<span class="expenses-icon green">
+													<i class="icon-monetization_on"></i>
+												</span>
+												<span class="expenses-type">Money left</span>
+												<span class="expenses-amount text-success">+9650</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+					<!-- Row starts -->
+					<div class="row gutter">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Clicks</h4>
+								</div>
+								<div class="panel-body">
+									<div id="advertising" class="chart-height1"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="row gutter">
+								<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+									<div class="panel height1">
+										<div class="panel-heading">
+											<h4>Subscribed Users</h4>
+										</div>
+										<div class="panel-body">
+											<div class="chart-horiz clearfix">
+												<ul class="sales-bar chart">
+													<li class="current" title="Trails">
+														<span class="bar" data-number="5679"></span>
+														<span class="number">5679</span>
+													</li>
+													<li class="current" title="Subscriptions">
+														<span class="bar" data-number="3458"></span>
+														<span class="number">3458</span>
+													</li>
+													<li class="current" title="Expansions">
+														<span class="bar" data-number="1934"></span>
+														<span class="number">1934</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+									<div class="panel height1">
+										<div class="panel-heading">
+											<h4>Gauge Graphs</h4>
+										</div>
+										<div class="panel-body center-text">
+											<div class="row gutter">
+												<div class="col-md-4 col-sm-4 col-xs-4">
+													<div id="chartExpenses"></div>
+												</div>
+												<div class="col-md-4 col-sm-4 col-xs-4">
+													<div id="chartRevenue"></div>
+												</div>
+												<div class="col-md-4 col-sm-4 col-xs-4">
+													<div id="chartProfit"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel height2">
+								<div class="panel-heading">
+									<h4>Stocks</h4>
+								</div>
+								<div class="panel-body">
+									<ul class="stocks">
+										<li>
+											<p class="clearfix">Apple Inc<span><i class="icon-arrow-up-right2 text-success"></i>465.45</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Google Inc<span><i class="icon-arrow-up-right2 text-success"></i>821.9</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Yahoo Inc<span><i class="icon-arrow-down-right2 text-danger"></i>31.88</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Facebook Inc<span><i class="icon-arrow-up-right2 text-success"></i>465.45</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Ebay Inc<span><i class="icon-arrow-down-right2 text-danger"></i>66.2</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Amazon Inc<span><i class="icon-arrow-up-right2 text-success"></i>278.73</span></p>
+										</li>
+										<li>
+											<p class="clearfix">Microsoft<span><i class="icon-arrow-up-right2 text-success"></i>39.64</span></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+					<!-- Row starts -->
+					<div class="row gutter">
+						<div class="col-md-12">
+							<div class="panel">
+								<div class="panel-heading">
+									<h4>User Rating</h4>
+								</div>
+								<div class="panel-body">
+									<div class="row gutter">
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user1.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate1"></div>
+												<h5 class="no-margin">Lucas</h5>
+											</div>
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user2.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate2"></div>
+												<h5 class="no-margin">Georgia</h5>
+											</div>
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user3.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate3"></div>
+												<h5 class="no-margin">Caroline</h5>
+											</div>
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user8.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate4"></div>
+												<h5 class="no-margin">Carlos</h5>
+											</div>
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user10.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate5"></div>
+												<h5 class="no-margin">Nathalie</h5>
+											</div>
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+											<div class="user-rating center-text">
+												<img src="img/thumbs/user12.png" class="img-responsive" alt="Bluemoon Admin Rating" />
+												<div class="stars" id="rate6"></div>
+												<h5 class="no-margin">Amanda</h5>
+											</div>
+										</div>
+									</div>
+								</div>		
+							</div>
+						</div>
+					</div>
+					<!-- Row ends -->
+
+				</div>
+				<!-- Main container ends -->
+
+			</div>
+			<!-- Dashboard wrapper ends -->
+			
+		</div>
+		<!-- Container fluid ends -->
+
+		<!-- Footer start -->
+		<footer>
+			© BlueMoon <span>2013-2016</span>
+		</footer>
+		<!-- Footer ends -->
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- jquery ScrollUp JS -->
+		<script src="js/scrollup/jquery.scrollUp.js"></script>
+
+		<!-- Datepicker -->
+		<script src="js/jquery-ui.min.js"></script>
+
+		<!-- Sparkline Graphs -->
+		<script src="js/sparkline/retina.js"></script>
+		<script src="js/sparkline/custom-sparkline.js"></script>
+
+		<!-- Horizontal Bar JS -->
+		<script src="js/horizontal-bar/horizBarChart.min.js"></script>
+		<script src="js/horizontal-bar/horizBarCustom.js"></script>
+
+		<!-- D3 JS -->
+		<script src="js/d3/d3.v3.min.js"></script>
+
+		<!-- C3 Graphs -->
+		<script src="js/c3/c3.js"></script>
+		<script src="js/c3/c3.custom.js"></script>
+
+		<!-- Gauge JS -->
+		<script src="js/d3/gauge.js"></script>
+		<script src="js/d3/gauge-custom.js"></script>
+
+		<!-- Rating JS -->
+		<script src="js/rating/jquery.raty.js"></script>
+
+		<!-- JVector Map -->
+		<script src="js/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+		<script src="js/jvectormap/gdp-data.js"></script>
+		<script src="js/jvectormap/world-mill-en.js"></script>
+
+		<!-- Custom JS -->
+		<script src="js/custom.js"></script>
+		<script src="js/custom-widgets.js"></script>
+	</body>
+</html>
