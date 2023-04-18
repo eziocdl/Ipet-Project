@@ -1,3 +1,4 @@
 # README #
 
-git remote add origin https://github.com/eziocdl/Ipet-Project.git
+Project created for advertisements of lost animals.
+Project presented in the course completion work.
